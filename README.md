@@ -3,7 +3,7 @@
 
 Dynamic Shortcode Widget for Elementor plugin let you to add custom shortcode with simple input field. It provides an easy to use interface for managing attributes for your shortcode.
 
-Get started at http://wordpress.org/plugins/dynamic-shortcode-widget/
+Get started at http://wordpress.org/plugins/dynamic-shortcode-widget-for-elementor/
 
 ## License
 - The Duplicator is licensed under the GPLv2 or later:
