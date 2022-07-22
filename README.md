@@ -16,4 +16,4 @@ Get started at http://wordpress.org/plugins/dynamic-shortcode-widget-for-element
 ## Changelog
 - v0.1.0
   - Plugin announced
-  - Options for the type of input fields
+  - Added image option for the type of input fields
