@@ -9,6 +9,9 @@ Get started at http://wordpress.org/plugins/dynamic-shortcode-widget-for-element
 - The plugin is licensed under the GPLv2 or later:
   - http://www.gnu.org/licenses/gpl-2.0.html
 
+## Screenshot
+ ![alt Shortcode Widget](https://raw.githubusercontent.com/louisho5/dynamic-shortcode-widget/main/image/screenshot.png)
+
 ## Changelog
 - v0.1.0
   - Plugin announced
