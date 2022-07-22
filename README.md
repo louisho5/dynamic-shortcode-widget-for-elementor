@@ -1,5 +1,5 @@
 # Dynamic Shortcode Widget for Elementor
-### Easy WordPress Cloning
+### Easy WordPress Shortcode Interface
 
 Dynamic Shortcode Widget for Elementor plugin let you to add custom shortcode with simple input field. It provides an easy to use interface for managing attributes for your shortcode.
 
