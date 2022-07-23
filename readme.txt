@@ -1,5 +1,5 @@
 === Dynamic Shortcode Widget for Elementor ===
-Tags: shortcode builder, shortcode widget, dynamic shortcode, shortcode editor, page builder, editor, drag-and-drop, visual editor, website builder, elementor, wysiwyg
+Tags: shortcode builder, shortcode widget, dynamic shortcode, shortcode editor, page builder, editor, drag-and-drop, visual editor, website builder, elementor, wysiwyg, elementor addons, elementor extensions,  elementor modules, elementor templates
 Tested up to: 6.0
 Stable tag: 0.1.0
 Contributors: louisho5
