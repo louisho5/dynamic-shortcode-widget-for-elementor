@@ -44,7 +44,7 @@ final class Custom_Ele_Widget_Extension {
 		$this->includes();
 		
 		// Add custom widget class name below
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Custom_Ele_Widget_Dynamic_Shortcode() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new \Dynamic_Shortcode_Widget_For_Elementor() );
 	}
 }
 
