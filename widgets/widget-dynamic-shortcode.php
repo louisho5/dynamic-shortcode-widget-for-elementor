@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-class Custom_Ele_Widget_Dynamic_Shortcode extends \Elementor\Widget_Base {
+class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
 
     public function get_name() {
         return 'widget-dynamic-shortcode';
