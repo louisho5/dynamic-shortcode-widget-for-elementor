@@ -6,15 +6,14 @@
  * Version: 0.1.0
  * Author: louisho5
  * License: GPLv2 or later
- * Text Domain: dynamic-shortcode-widget
+ * Text Domain: dynamic-shortcode-widget-for-elementor
+ * Elementor tested up to: 3.6.7
+ * Elementor Pro tested up to: 3.7.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
-
-
-/***** Compatible with Elementor v3.4.2 above *****/
 
 final class Custom_Ele_Widget_Extension {
 
