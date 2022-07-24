@@ -16,8 +16,7 @@ function custom_shortcode( $atts ) {
     $attributes  = shortcode_atts( array(
       'name' => 'world'
     ), $atts );
-    $result = '<h1>Hello ' . $attributes['name'] . '!</h1>'
-    return $result;
+    return '<h1>Hello ' . $attributes['name'] . '!</h1>';
 }
 add_shortcode( 'helloworld', 'custom_shortcode' );
 ```
