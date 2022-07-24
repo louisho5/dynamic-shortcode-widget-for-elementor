@@ -11,24 +11,25 @@ Get started at http://wordpress.org/plugins/dynamic-shortcode-widget-for-element
 ## Frequently Asked Questions
 
 ##### How to create a custom shortcode
-`````
+```php
 function custom_shortcode( $atts ) {
     $attributes  = shortcode_atts( array(
       'name' => 'world'
     ), $atts );
-    return '<h1>Hello ' . $attributes['name'] . '!</h1>';
+    $result = '<h1>Hello ' . $attributes['name'] . '!</h1>'
+    return $result;
 }
 add_shortcode( 'helloworld', 'custom_shortcode' );
-`````
+```
 
 ##### How to use the shortcode
-`````
+```
 Shortcode: [helloworld]
 Outputs "Hello world!"
 
 Shortcode: [helloworld name=”Bob”]
 Outputs "Hello Bob!"
-`````
+```
 
 ## License
 - The plugin is licensed under the GPLv2 or later:
