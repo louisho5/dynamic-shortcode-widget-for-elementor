@@ -62,6 +62,7 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
 				'options' => [
 					'text'  => esc_html__( 'Text', 'plugin-name' ),
 					'image' => esc_html__( 'Image', 'plugin-name' ),
+                    'url' => esc_html__( 'URL', 'plugin-name' ),
 				],
 			]
 		);
@@ -96,6 +97,22 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
 					'active' => true,
 				],
             ]
+        );
+        // Content input (URL)
+        $repeater->add_control(
+            'content_url',
+            [
+				'label' => esc_html__( 'Link', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::URL,
+				'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
+				'options' => false,
+                'condition' => [
+                    'content_type' => 'url',
+                ],
+                'dynamic' => [
+					'active' => true,
+				],
+			]
         );
 
         // Text input (Text)
@@ -145,7 +162,7 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
 		if ( $settings['list'] ) {
 			foreach (  $settings['list'] as $item ) {
                 $content = esc_html( $item['content'] );
-				$output .= " " . $item['attribute'] . "='" . $content . $item['content_image']['url'] . "'";
+				$output .= " " . $item['attribute'] . "='" . $content . $item['content_image']['url'] . $item['content_url']['url'] . "'";
 			}
 		}
         $output .= "]";
