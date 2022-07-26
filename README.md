@@ -6,7 +6,7 @@ Dynamic Shortcode Widget for Elementor plugin let you to add custom shortcode wi
 Get started at http://wordpress.org/plugins/dynamic-shortcode-widget-for-elementor/
 
 ## Screenshot
- ![alt Shortcode Widget](https://raw.githubusercontent.com/louisho5/dynamic-shortcode-widget/main/image/screenshot.png)
+ ![alt Shortcode Widget](https://github.com/louisho5/dynamic-shortcode-widget-for-elementor/blob/5529766a8b6c33d10dc1d68b5ca9ffb891c9b052/image/screenshot.png)
 
 ## Frequently Asked Questions
 
