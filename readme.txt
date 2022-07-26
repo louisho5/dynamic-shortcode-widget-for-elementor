@@ -55,6 +55,10 @@ Outputs "Hello Bob!"
 
 == Changelog ==
 
+= 0.2.0 =
+
+* Added URL option for the type of input fields
+
 = 0.1.0 =
 
 * Plugin announced
