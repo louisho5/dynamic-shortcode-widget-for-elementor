@@ -35,6 +35,10 @@ Outputs "Hello Bob!"
   - http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Changelog
+
+- v0.2.0
+  - Added URL option for the type of input fields
+  
 - v0.1.0
   - Plugin announced
   - Added image option for the type of input fields
