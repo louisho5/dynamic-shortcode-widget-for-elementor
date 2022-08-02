@@ -36,6 +36,9 @@ Outputs "Hello Bob!"
 
 ## Changelog
 
+- v0.2.1
+  - Escape only with qoute characters instead of htmlˇ
+
 - v0.2.0
   - Added URL option for the type of input fields
   
