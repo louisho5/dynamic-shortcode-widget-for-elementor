@@ -160,7 +160,7 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
 		$output .= "[" . $settings['name'];
 		
 		if ( $settings['list'] ) {
-			foreach (  $settings['list'] as $item ) {
+			foreach ( $settings['list'] as $item ) {
 				$content_text = str_replace(array('"', "'"), array('&quot;', '&apos;'), $item['content']);
 				$content_image = esc_url( $item['content_image']['url'] );
 				$content_url = esc_url( $item['content_url']['url'] );
