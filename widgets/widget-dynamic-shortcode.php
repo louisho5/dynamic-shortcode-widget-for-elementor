@@ -54,18 +54,19 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
 
         // Content Type (Select)
         $repeater->add_control(
-			'content_type',
-			[
-				'label' => esc_html__( 'Select type', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'text',
-				'options' => [
-					'text'  => esc_html__( 'Text', 'plugin-name' ),
-					'image' => esc_html__( 'Image', 'plugin-name' ),
+            'content_type',
+            [
+                'label' => esc_html__( 'Select type', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'text',
+                'options' => [
+                    'text'  => esc_html__( 'Text', 'plugin-name' ),
+                    'image' => esc_html__( 'Image', 'plugin-name' ),
                     'url' => esc_html__( 'URL', 'plugin-name' ),
-				],
-			]
-		);
+                    'wysiwyg' => esc_html__( 'WYSIWYG Editor', 'plugin-name' ),
+                ],
+            ]
+        );
 		// Content input (Textarea)
 		$repeater->add_control(
             'content',
@@ -114,8 +115,24 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
 				],
 			]
         );
+        // Content input (WYSIWYG Editor)
+        $repeater->add_control(
+            'content_wysiwyg',
+            [
+                'label' => esc_html__( 'Link', 'plugin-name' ),
+                'type' => \Elementor\Controls_Manager::WYSIWYG,
+                'placeholder' => esc_html__( 'Type your own text', 'plugin-name' ),
+                'options' => false,
+                'condition' => [
+                    'content_type' => 'wysiwyg',
+                ],
+                'dynamic' => [
+                    'active' => true,
+                ],
+            ]
+        );
 
-        // Text input (Text)
+        // Shortcode name input (Text)
         $this->add_control(
             'name',
             [
@@ -123,8 +140,8 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'description' => esc_html__( 'A complete shortcode be like: [ShortcodeName attr1="Something" attr2="Something else"]', 'plugin-name' ),
                 'dynamic' => [
-					'active' => true,
-				],
+                    'active' => true,
+                ],
             ]
         );
 
@@ -160,16 +177,16 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
 		$output .= "[" . $settings['name'];
 		
 		if ( $settings['list'] ) {
-		    foreach (  $settings['list'] as $item ) {
-			$content_text = str_replace(array('"', "'"), array('&quot;', '&apos;'), $item['content']);
-			$content_image = esc_url( $item['content_image']['url'] );
-			$content_url = esc_url( $item['content_url']['url'] );
-			$content = $content_text . $content_image . $content_url;
+            foreach (  $settings['list'] as $item ) {
+                $content_text = str_replace(array("'"), array('&apos;'), $item['content']);
+                $content_image = esc_url( $item['content_image']['url'] );
+                $content_url = esc_url( $item['content_url']['url'] );
+                $content_wysiwyg = str_replace(array("'"), array('&apos;'), $item['content_wysiwyg']);
+                $content = $content_text . $content_image . $content_url . $content_wysiwyg;
 
-			$output .= " " . $item['attribute'] . "='" . $content . "'";
-		    }
-		}
-        $output .= "]";
+                $output .= " " . $item['attribute'] . "='" . $content . "'";
+            }
+        }        $output .= "]";
 
         echo do_shortcode( $output );
 
