@@ -37,8 +37,8 @@ Outputs "Hello Bob!"
 ## Changelog
 
 - v0.3.1
-  - Support the latest WordPress & Elementor 
-  - 
+  - Support the latest WordPress & Elementor
+
 - v0.3.0
   - Added WYSIWYG option for the type of input fields
 
