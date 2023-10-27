@@ -1,7 +1,7 @@
 === Dynamic Shortcode Widget for Elementor ===
 Tags: shortcode builder, shortcode widget, dynamic shortcode, shortcode editor, page builder, editor, drag-and-drop, visual editor, website builder, elementor, wysiwyg, elementor addons, elementor extensions,  elementor modules, elementor templates
-Tested up to: 6.0
-Stable tag: 0.3.0
+Tested up to: 6.3
+Stable tag: 0.3.1
 Contributors: louisho5
 
 Dynamic Shortcode Widget for Elementor plugin let you to add custom shortcode with simple input field.

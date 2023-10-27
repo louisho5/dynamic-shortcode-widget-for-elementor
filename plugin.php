@@ -3,12 +3,12 @@
  * Plugin Name: Dynamic Shortcode Widget for Elementor
  * Plugin URI: https://wordpress.org/plugins/dynamic-shortcode-widget-for-elementor/
  * Description: Just another shortcode widget for elementor. Simple but useful.
- * Version: 0.3.0
+ * Version: 0.3.1
  * Author: louisho5
  * License: GPLv2 or later
  * Text Domain: dynamic-shortcode-widget-for-elementor
- * Elementor tested up to: 3.6.7
- * Elementor Pro tested up to: 3.7.2
+ * Elementor tested up to: 3.16.5
+ * Elementor Pro tested up to: 3.16.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
