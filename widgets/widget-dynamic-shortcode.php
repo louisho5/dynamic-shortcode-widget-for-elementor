@@ -170,26 +170,28 @@ class Dynamic_Shortcode_Widget_For_Elementor extends \Elementor\Widget_Base {
     }
 
     protected function render() {
-
         $settings = $this->get_settings_for_display();
-		$output = "";
-		
-		$output .= "[" . $settings['name'];
-		
-		if ( $settings['list'] ) {
+        $output = "";
+        
+        $output .= "[" . $settings['name'];
+        
+        if ( !empty( $settings['list'] ) ) { // Check if list is not empty
             foreach (  $settings['list'] as $item ) {
-                $content_text = str_replace(array("'"), array('&apos;'), $item['content']);
-                $content_image = esc_url( $item['content_image']['url'] );
-                $content_url = esc_url( $item['content_url']['url'] );
-                $content_wysiwyg = str_replace(array("'"), array('&apos;'), $item['content_wysiwyg']);
+                $content_text = isset($item['content']) ? str_replace(array("'"), array('&apos;'), $item['content']) : '';
+                $content_image = isset($item['content_image']['url']) ? esc_url( $item['content_image']['url'] ) : '';
+                $content_url = isset($item['content_url']['url']) ? esc_url( $item['content_url']['url'] ) : '';
+                $content_wysiwyg = isset($item['content_wysiwyg']) ? str_replace(array("'"), array('&apos;'), $item['content_wysiwyg']) : '';
                 $content = $content_text . $content_image . $content_url . $content_wysiwyg;
-
-                $output .= " " . $item['attribute'] . "='" . $content . "'";
+    
+                if (isset($item['attribute'])) {
+                    $output .= " " . $item['attribute'] . "='" . $content . "'";
+                }
             }
-        }        $output .= "]";
-
+        }
+        
+        $output .= "]";
+    
         echo do_shortcode( $output );
-
     }
 
 }
