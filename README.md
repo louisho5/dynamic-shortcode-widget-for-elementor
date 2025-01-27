@@ -36,6 +36,9 @@ Outputs "Hello Bob!"
 
 ## Changelog
 
+- v0.4.0
+  - Support the latest WordPress & Elementor
+  - 
 - v0.3.1
   - Support the latest WordPress & Elementor
 
